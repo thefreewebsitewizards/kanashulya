@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en"><head>
+<html class="scroll-smooth overflow-x-hidden" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Yana Kanashko | UGC Content Creator Portfolio</title>
@@ -46,6 +46,10 @@
             overflow: hidden;
             width: 100%;
         }
+        img, video {
+            max-width: 100%;
+            height: auto;
+        }
         .marquee-track {
             display: flex;
             width: max-content;
@@ -68,7 +72,7 @@
         }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-primary dark:text-gray-100 font-sans transition-colors duration-300">
+<body class="bg-background-light dark:bg-background-dark text-primary dark:text-gray-100 font-sans transition-colors duration-300 overflow-x-hidden">
 <div class="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">
 <a class="p-3 bg-white dark:bg-zinc-800 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center justify-center border border-zinc-200 dark:border-zinc-700" href="mailto:yana.kanashko@gmail.com" aria-label="Email">
 <span class="material-icons-outlined text-xl">mail</span>
@@ -95,7 +99,7 @@
 </button>
 </div>
 </nav>
-<div id="mobileMenu" class="fixed inset-0 z-50 hidden">
+<div id="mobileMenu" class="fixed top-20 inset-x-0 bottom-0 z-50 hidden">
 <div class="absolute inset-0 bg-black/40" data-close="true"></div>
 <nav id="mobileMenuPanel" class="absolute top-0 left-0 right-0 bg-background-light dark:bg-background-dark border-b border-zinc-200 dark:border-zinc-800 shadow-lg transform -translate-y-full transition-transform duration-300">
 <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-6 text-sm font-medium tracking-wide uppercase">
@@ -114,7 +118,7 @@
 </div>
 <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
 <div class="max-w-3xl">
-<h1 class="font-display text-6xl md:text-8xl leading-tight mb-8">
+<h1 class="font-display text-5xl sm:text-6xl md:text-8xl leading-tight mb-8">
                     Strategic <span class="italic">storytelling</span> that connects <br/>
 <span class="text-stroke text-primary dark:text-white">brands to people.</span>
 </h1>
@@ -178,7 +182,7 @@
 <h2 class="text-5xl md:text-6xl font-display mb-4">UGC Projects</h2>
 <p class="text-lg opacity-60">Curated high-performance video content across niches.</p>
 </div>
-<div class="flex gap-4">
+<div class="flex flex-wrap gap-4">
 <button type="button" class="px-6 py-2 border border-zinc-200 dark:border-zinc-700 rounded-full hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all" data-target="#beauty">Beauty</button>
 <button type="button" class="px-6 py-2 border border-zinc-200 dark:border-zinc-700 rounded-full hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all" data-target="#fashion">Fashion</button>
 <button type="button" class="px-6 py-2 border border-zinc-200 dark:border-zinc-700 rounded-full hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all" data-target="#restaurants">Restaurants</button>
@@ -338,7 +342,7 @@
 </section>
 <section class="py-24 bg-white dark:bg-zinc-900/50" id="gallery" aria-labelledby="gallery-title">
 <div class="max-w-7xl mx-auto px-6">
-<div class="flex items-end justify-between mb-10">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
 <h2 id="gallery-title" class="text-5xl md:text-6xl font-display">Gallery</h2>
 <button id="gallerySeeMore" type="button" class="px-6 py-2 border border-zinc-200 dark:border-zinc-700 rounded-full hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all">See all gallery</button>
 </div>
@@ -439,8 +443,13 @@
 </section>
 <footer class="py-12 border-t border-zinc-200 dark:border-zinc-800">
 <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-<div class="text-sm opacity-50 uppercase tracking-widest">
-                © 2024 Yana Kanashko • All Rights Reserved
+<div class="text-sm opacity-50 uppercase tracking-widest flex flex-wrap items-center gap-2">
+                © 2024 Yana Kanashko • All Rights Reserved • 
+                <a href="https://thefreewebsitewizards.com/" target="_blank" class="hover:text-accent transition-colors">Made by The Free Website</a>
+                <button id="copyUrl" class="hover:text-accent transition-colors flex items-center p-1" title="Copy link">
+                    <span class="material-icons-outlined text-base">content_copy</span>
+                </button>
+                <span id="copyFeedback" class="hidden text-[10px] text-accent lowercase bg-accent/10 px-2 py-0.5 rounded">Copied!</span>
             </div>
 <div class="flex gap-8">
 <a class="hover:text-accent transition-colors" href="https://www.tiktok.com/@kanashulyaa" target="_blank" rel="noopener" aria-label="TikTok">
@@ -524,6 +533,21 @@
                 closeMenu();
             });
         });
+
+        // Copy URL functionality
+        const copyBtn = document.getElementById('copyUrl');
+        const feedback = document.getElementById('copyFeedback');
+        if (copyBtn) {
+            copyBtn.addEventListener('click', () => {
+                const url = 'https://thefreewebsitewizards.com/';
+                navigator.clipboard.writeText(url).then(() => {
+                    feedback.classList.remove('hidden');
+                    setTimeout(() => feedback.classList.add('hidden'), 2000);
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                });
+            });
+        }
         
         (function initGallery() {
             const grid = document.getElementById('galleryGrid');
