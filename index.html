@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yana Kanashko | UGC Content Creator Portfolio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1a1a1a",
+                        "background-light": "#F9F6F1",
+                        "background-dark": "#0F0F0F",
+                        accent: "#D4B996"
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Plus Jakarta Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(10px);
+            background-color: rgba(249, 246, 241, 0.8);
+        }
+        .dark .glass-nav {
+            background-color: rgba(15, 15, 15, 0.8);
+        }
+        .text-stroke {
+            -webkit-text-stroke: 1px currentColor;
+            -webkit-text-fill-color: transparent;
+        }
+        .brand-marquee {
+            overflow: hidden;
+            width: 100%;
+        }
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            will-change: transform;
+            animation: marquee 40s linear infinite;
+        }
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .marquee-track {
+                animation: none;
+            }
+        }
+        @media (min-width: 1024px) {
+            section.relative.min-h-screen .absolute > img {
+                object-position: center 30%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-primary dark:text-gray-100 font-sans transition-colors duration-300">
+<div class="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">
+<a class="p-3 bg-white dark:bg-zinc-800 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center justify-center border border-zinc-200 dark:border-zinc-700" href="mailto:yana.kanashko@gmail.com" aria-label="Email">
+<span class="material-icons-outlined text-xl">mail</span>
+</a>
+<a class="p-3 bg-white dark:bg-zinc-800 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center justify-center border border-zinc-200 dark:border-zinc-700" href="https://www.tiktok.com/@kanashulyaa" target="_blank" rel="noopener" aria-label="TikTok">
+<svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.9-.32-1.98-.23-2.81.36-.54.38-.89.98-1.02 1.64-.3 1.64.9 3.35 2.5 3.64.4.08.82.08 1.22.03 1.07-.12 2.01-.96 2.15-2.02.01-.39.01-.79.01-1.18V0h.04z"/></svg>
+</a>
+<a class="p-3 bg-white dark:bg-zinc-800 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center justify-center border border-zinc-200 dark:border-zinc-700" href="https://www.instagram.com/kanashulya" target="_blank" rel="noopener" aria-label="Instagram">
+<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"></circle></svg>
+</a>
+</div>
+<nav class="fixed top-0 w-full z-40 glass-nav border-b border-zinc-200 dark:border-zinc-800">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="text-2xl font-display font-bold tracking-tight">Yana Kanashko</div>
+<div class="hidden md:flex items-center gap-10 text-sm font-medium tracking-wide uppercase">
+<a class="hover:text-accent transition-colors" href="#about">About</a>
+<a class="hover:text-accent transition-colors" href="#portfolio">Portfolio</a>
+<a class="hover:text-accent transition-colors" href="#gallery">Gallery</a>
+<a class="hover:text-accent transition-colors" href="#services">Services</a>
+<a class="px-6 py-2.5 bg-primary text-white dark:bg-white dark:text-primary rounded-full hover:opacity-90 transition-opacity" href="#contact">Work with me</a>
+</div>
+<button id="hamburger" class="md:hidden transition-transform" aria-expanded="false" aria-controls="mobileMenuPanel" aria-label="Open menu">
+<span id="hamburgerIcon" class="material-icons-outlined">menu</span>
+</button>
+</div>
+</nav>
+<div id="mobileMenu" class="fixed inset-0 z-50 hidden">
+<div class="absolute inset-0 bg-black/40" data-close="true"></div>
+<nav id="mobileMenuPanel" class="absolute top-0 left-0 right-0 bg-background-light dark:bg-background-dark border-b border-zinc-200 dark:border-zinc-800 shadow-lg transform -translate-y-full transition-transform duration-300">
+<div class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-6 text-sm font-medium tracking-wide uppercase">
+<a class="hover:text-accent transition-colors" href="#about">About</a>
+<a class="hover:text-accent transition-colors" href="#portfolio">Portfolio</a>
+<a class="hover:text-accent transition-colors" href="#gallery">Gallery</a>
+<a class="hover:text-accent transition-colors" href="#services">Services</a>
+<a class="px-6 py-2.5 bg-primary text-white dark:bg-white dark:text-primary rounded-full hover:opacity-90 transition-opacity" href="#contact">Work with me</a>
+</div>
+</nav>
+</div>
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Yana Kanashko High Fashion Editorial" class="w-full h-full object-cover grayscale-[20%] opacity-90 dark:opacity-60" src="asset/gallery/Photo Apr 19 2024, 3 15 13 PM.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-light via-transparent to-transparent dark:from-background-dark"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+<div class="max-w-3xl">
+<h1 class="font-display text-6xl md:text-8xl leading-tight mb-8">
+                    Strategic <span class="italic">storytelling</span> that connects <br/>
+<span class="text-stroke text-primary dark:text-white">brands to people.</span>
+</h1>
+<div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+<a class="px-10 py-5 bg-primary text-white dark:bg-white dark:text-primary text-lg font-medium rounded-full hover:shadow-2xl transition-all hover:-translate-y-1" href="#portfolio">
+                        See My Work
+                    </a>
+<div class="flex flex-col">
+<span class="text-sm opacity-60 uppercase tracking-widest mb-1"></span>
+<span class="text-lg font-semibold border-b-2 border-accent"></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+ 
+ 
+ 
+<div class="py-16 bg-zinc-100 dark:bg-zinc-900 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<p class="text-center text-sm uppercase tracking-[0.3em] mb-10 opacity-50">Trusted by modern brands worldwide</p>
+<div class="relative opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="brand-marquee">
+<div class="marquee-track">
+<ul id="brandGroup1" class="flex-none flex items-center gap-12 md:gap-24"></ul>
+<ul id="brandGroup2" class="flex-none flex items-center gap-12 md:gap-24" aria-hidden="true"></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="py-24 md:py-32 max-w-7xl mx-auto px-6" id="about">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-4xl md:text-5xl font-display leading-snug mb-8">
+                    I help brands <span class="italic text-accent">boost conversions</span> through relatable, engaging and creative content.
+                </h2>
+<div class="space-y-6 text-lg opacity-80 leading-relaxed">
+<p>I’m a European fashion content creator based in Los Angeles, with over three years of experience collaborating with brands across fashion, beauty, food, jewelry, and events. Certified by the Institut Français de la Mode, I specialize in creating visually aligned, brand-focused content with strong attention to detail, creativity, and audience engagement. I’m also a brand ambassador for FWEE Makeup and Espoir Makeup.</p>
+</div>
+<div class="mt-12 grid grid-cols-2 gap-8">
+<div>
+<div class="text-4xl font-display mb-2">94%</div>
+<div class="text-sm uppercase tracking-wider opacity-60">Avg. Engagement</div>
+</div>
+<div>
+<div class="text-4xl font-display mb-2">2M+</div>
+<div class="text-sm uppercase tracking-wider opacity-60">Monthly Impressions</div>
+</div>
+</div>
+</div>
+<div class="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+<img alt="Yana Kanashko Portrait" class="w-full h-full object-cover" src="asset/gallery/Photo Jan 07 2026, 7 15 12 PM (4).jpg"/>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-zinc-900/50" id="portfolio">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<h2 class="text-5xl md:text-6xl font-display mb-4">UGC Projects</h2>
+<p class="text-lg opacity-60">Curated high-performance video content across niches.</p>
+</div>
+<div class="flex gap-4">
+<button type="button" class="px-6 py-2 border border-zinc-200 dark:border-zinc-700 rounded-full hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all" data-target="#beauty">Beauty</button>
+<button type="button" class="px-6 py-2 border border-zinc-200 dark:border-zinc-700 rounded-full hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all" data-target="#fashion">Fashion</button>
+<button type="button" class="px-6 py-2 border border-zinc-200 dark:border-zinc-700 rounded-full hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all" data-target="#restaurants">Restaurants</button>
+</div>
+</div>
+<div id="beauty" class="mb-20">
+<h3 class="text-3xl md:text-4xl font-display mb-6">Beauty Reels</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/beauty/OGEE.mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">OGEE</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Beauty</p>
+</div>
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/beauty/FWEE.mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">FWEE</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Beauty</p>
+</div>
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/beauty/Espoir.mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">Espoir</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Beauty</p>
+</div>
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/beauty/DRMTLGY.mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">DRMTLGY</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Beauty</p>
+</div>
+</div>
+</div>
+
+<div id="fashion" class="mb-20">
+<h3 class="text-3xl md:text-4xl font-display mb-6">Fashion Reels</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/fashion/VIVAIA.mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">VIVAIA</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Fashion</p>
+</div>
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/fashion/VIVAIA..mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">VIVAIA</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Fashion</p>
+</div>
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/fashion/Underoutfit.mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">Underoutfit</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Fashion</p>
+</div>
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/fashion/Fanka.mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">Fanka</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Fashion</p>
+</div>
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/fashion/FANCI.ME.mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">FANCI.ME</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Fashion</p>
+</div>
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/fashion/COSY ISLAND.mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">COSY ISLAND</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Fashion</p>
+</div>
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/fashion/Bandolier.mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">Bandolier</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Fashion</p>
+</div>
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/fashion/She Said Yes.mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">She Said Yes</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Fashion</p>
+</div>
+</div>
+</div>
+
+<div id="restaurants" class="mb-4">
+<h3 class="text-3xl md:text-4xl font-display mb-6">Restaurant Reels</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/Restaurants/Video Jan 07 2026, 9 43 19 PM.mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">Restaurant Reel</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Restaurants</p>
+</div>
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/Restaurants/Video Jan 07 2026, 9 43 19 PM (1).mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">Restaurant Reel (1)</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Restaurants</p>
+</div>
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/Restaurants/Video Jan 07 2026, 9 43 19 PM (2).mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">Restaurant Reel (2)</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Restaurants</p>
+</div>
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/Restaurants/Video Jan 07 2026, 9 43 19 PM (3).mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">Restaurant Reel (3)</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Restaurants</p>
+</div>
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/Restaurants/Video Jan 07 2026, 9 43 19 PM (4).mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">Restaurant Reel (4)</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Restaurants</p>
+</div>
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/Restaurants/Video Jan 07 2026, 9 43 19 PM (6).mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">Restaurant Reel (6)</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Restaurants</p>
+</div>
+<div class="group">
+<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
+<video class="w-full h-full object-cover" src="asset/website/Restaurants/Video Jan 07 2026, 9 43 19 PM (7).mp4" controls playsinline></video>
+</div>
+<h4 class="text-xl font-display">Restaurant Reel (7)</h4>
+<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Restaurants</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-zinc-900/50" id="gallery" aria-labelledby="gallery-title">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex items-end justify-between mb-10">
+<h2 id="gallery-title" class="text-5xl md:text-6xl font-display">Gallery</h2>
+<button id="gallerySeeMore" type="button" class="px-6 py-2 border border-zinc-200 dark:border-zinc-700 rounded-full hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all">See all gallery</button>
+</div>
+<div id="galleryGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+</div>
+</section>
+<div id="lightbox" class="fixed inset-0 z-[60] hidden">
+<div class="absolute inset-0 bg-black/80" data-close="true"></div>
+<div class="absolute inset-0 flex items-center justify-center p-4">
+<img id="lightboxImg" class="max-h-[90vh] max-w-[90vw] object-contain rounded-2xl shadow-2xl" alt="Gallery item"/>
+</div>
+</div>
+<section class="py-24 max-w-7xl mx-auto px-6" id="services">
+<div class="mb-16 text-center">
+<h2 class="text-5xl font-display mb-4">What I Can Do For You</h2>
+<p class="text-lg opacity-60">Full-service content creation tailored to your brand goals.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="p-10 bg-white dark:bg-zinc-800 rounded-3xl border border-zinc-100 dark:border-zinc-700 hover:shadow-xl transition-all group">
+<div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform" aria-hidden="true">
+<span class="material-icons-outlined text-accent text-3xl">star</span>
+</div>
+<div class="text-sm uppercase tracking-widest opacity-60 mb-2">01.</div>
+<h3 class="text-2xl font-display leading-snug mb-2">
+<span class="block">Promote a brand in a</span>
+<span class="block">unique and luxury</span>
+<span class="block">driven way.</span>
+</h3>
+</div>
+<div class="p-10 bg-white dark:bg-zinc-800 rounded-3xl border border-zinc-100 dark:border-zinc-700 hover:shadow-xl transition-all group">
+<div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform" aria-hidden="true">
+<span class="material-icons-outlined text-accent text-3xl">sell</span>
+</div>
+<div class="text-sm uppercase tracking-widest opacity-60 mb-2">02.</div>
+<h3 class="text-2xl font-display leading-snug mb-2">
+<span class="block">Post and tag the</span>
+<span class="block">brand across</span>
+<span class="block">Instagram posts,</span>
+<span class="block">stories, and reels.</span>
+</h3>
+</div>
+<div class="p-10 bg-white dark:bg-zinc-800 rounded-3xl border border-zinc-100 dark:border-zinc-700 hover:shadow-xl transition-all group">
+<div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform" aria-hidden="true">
+<span class="material-icons-outlined text-accent text-3xl">video_library</span>
+</div>
+<div class="text-sm uppercase tracking-widest opacity-60 mb-2">03.</div>
+<h3 class="text-2xl font-display leading-snug mb-2">
+<span class="block">Produce custom</span>
+<span class="block">user-generated</span>
+<span class="block">content (UGC) for</span>
+<span class="block">the brand.</span>
+</h3>
+</div>
+<div class="p-10 bg-white dark:bg-zinc-800 rounded-3xl border border-zinc-100 dark:border-zinc-700 hover:shadow-xl transition-all group">
+<div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform" aria-hidden="true">
+<span class="material-icons-outlined text-accent text-3xl">group</span>
+</div>
+<div class="text-sm uppercase tracking-widest opacity-60 mb-2">04.</div>
+<h3 class="text-2xl font-display leading-snug mb-2">
+<span class="block">Collaborate on posts</span>
+<span class="block">with the brand.</span>
+</h3>
+</div>
+<div class="p-10 bg-white dark:bg-zinc-800 rounded-3xl border border-zinc-100 dark:border-zinc-700 hover:shadow-xl transition-all group">
+<div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform" aria-hidden="true">
+<span class="material-icons-outlined text-accent text-3xl">verified</span>
+</div>
+<div class="text-sm uppercase tracking-widest opacity-60 mb-2">05.</div>
+<h3 class="text-2xl font-display leading-snug mb-2">
+<span class="block">Act as a brand</span>
+<span class="block">ambassador.</span>
+</h3>
+</div>
+<div class="p-10 bg-white dark:bg-zinc-800 rounded-3xl border border-zinc-100 dark:border-zinc-700 hover:shadow-xl transition-all group">
+<div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform" aria-hidden="true">
+<span class="material-icons-outlined text-accent text-3xl">event</span>
+</div>
+<div class="text-sm uppercase tracking-widest opacity-60 mb-2">06.</div>
+<h3 class="text-2xl font-display leading-snug mb-2">
+<span class="block">Event Appearance</span>
+<span class="block">(storytelling, tagging,</span>
+<span class="block">promoting the brand)</span>
+</h3>
+</div>
+</div>
+</section>
+<section class="py-24 px-6" id="contact">
+<div class="max-w-5xl mx-auto bg-primary text-white rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-accent rounded-full opacity-20 blur-3xl"></div>
+<h2 class="text-4xl md:text-6xl font-display mb-8 relative z-10">Ready to transform your <span class="italic">brand presence?</span></h2>
+<p class="text-xl opacity-80 mb-12 max-w-2xl mx-auto relative z-10">Let's create content that resonates. I'm currently booking for next month.</p>
+<div class="flex items-center justify-center relative z-10">
+<a class="px-12 py-5 bg-white text-primary rounded-full text-lg font-bold hover:bg-accent hover:text-white transition-all shadow-lg" href="mailto:yana.kanashko@gmail.com">
+                    Email Me Now
+                </a>
+</div>
+</div>
+</section>
+<footer class="py-12 border-t border-zinc-200 dark:border-zinc-800">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-sm opacity-50 uppercase tracking-widest">
+                © 2024 Yana Kanashko • All Rights Reserved
+            </div>
+<div class="flex gap-8">
+<a class="hover:text-accent transition-colors" href="https://www.tiktok.com/@kanashulyaa" target="_blank" rel="noopener" aria-label="TikTok">
+<svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.9-.32-1.98-.23-2.81.36-.54.38-.89.98-1.02 1.64-.3 1.64.9 3.35 2.5 3.64.4.08.82.08 1.22.03 1.07-.12 2.01-.96 2.15-2.02.01-.39.01-.79.01-1.18V0h.04z"/>
+                </svg>
+</a>
+<a class="hover:text-accent transition-colors" href="https://www.instagram.com/kanashulya" target="_blank" rel="noopener" aria-label="Instagram">
+<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"></circle></svg>
+</a>
+</div>
+</div>
+</footer>
+<script>
+        const bodyEl = document.body;
+        const hamburger = document.getElementById('hamburger');
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuPanel = document.getElementById('mobileMenuPanel');
+
+        function openMenu() {
+            mobileMenu.classList.remove('hidden');
+            mobileMenuPanel.classList.remove('-translate-y-full');
+            mobileMenuPanel.classList.add('translate-y-0');
+            hamburger.setAttribute('aria-expanded', 'true');
+            hamburgerIcon.textContent = 'close';
+            bodyEl.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            mobileMenuPanel.classList.add('-translate-y-full');
+            mobileMenuPanel.classList.remove('translate-y-0');
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburgerIcon.textContent = 'menu';
+            bodyEl.classList.remove('overflow-hidden');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+        }
+
+        function toggleMenu() {
+            if (hamburger.getAttribute('aria-expanded') === 'true') {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target.dataset.close === 'true') {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMenu();
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+                closeMenu();
+            });
+        });
+
+        document.querySelectorAll('button[data-target]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const targetSel = btn.getAttribute('data-target');
+                const target = document.querySelector(targetSel);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+                closeMenu();
+            });
+        });
+        
+        (function initGallery() {
+            const grid = document.getElementById('galleryGrid');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            const seeMoreBtn = document.getElementById('gallerySeeMore');
+            if (!grid || !lightbox || !lightboxImg) return;
+            const basePath = 'asset/gallery/';
+            const imgs = [
+                'Photo Apr 19 2024, 3 15 13 PM.jpg',
+                'Photo Apr 21 2023, 11 54 34 AM.jpg',
+                'Photo Aug 03 2025, 12 23 20 PM.jpg',
+                'Photo Aug 03 2025, 12 24 09 PM.jpg',
+                'Photo Aug 06 2025, 10 34 29 AM.jpg',
+                'Photo Aug 23 2025, 1 38 04 PM.jpg',
+                'Photo Aug 24 2025, 4 56 55 PM.jpg',
+                'Photo Dec 01 2025, 11 39 15 PM.jpg',
+                'Photo Dec 07 2025, 12 49 54 AM.jpg',
+                'Photo Dec 22 2025, 1 38 42 PM.jpg',
+                'Photo Dec 23 2025, 6 48 35 PM.jpg',
+                'Photo Jan 07 2026, 6 55 14 PM.jpg',
+                'Photo Jan 07 2026, 7 15 12 PM (1).jpg',
+                'Photo Jan 07 2026, 7 15 12 PM (10).jpg',
+                'Photo Jan 07 2026, 7 15 12 PM (2).jpg',
+                'Photo Jan 07 2026, 7 15 12 PM (3).jpg',
+                'Photo Jan 07 2026, 7 15 12 PM (4).jpg',
+                'Photo Jan 07 2026, 7 15 12 PM (5).jpg',
+                'Photo Jan 07 2026, 7 15 12 PM (6).jpg',
+                'Photo Jan 07 2026, 7 15 12 PM (7).jpg',
+                'Photo Jan 07 2026, 7 15 12 PM (8).jpg',
+                'Photo Jan 07 2026, 7 15 12 PM (9).jpg',
+                'Photo Jan 07 2026, 7 15 12 PM.jpg',
+                'Photo Jan 19 2024, 11 22 36 PM.jpg',
+                'Photo Jul 19 2025, 5 02 12 PM.jpg',
+                'Photo Jul 25 2025, 10 17 01 PM (1).jpg',
+                'Photo Jul 25 2025, 10 17 01 PM.jpg',
+                'Photo Jul 30 2025, 5 17 01 PM.jpg',
+                'Photo Jun 07 2025, 4 55 10 PM.jpg',
+                'Photo Mar 09 2025, 5 03 09 PM.jpg',
+                'Photo May 14 2024, 10 00 25 PM.jpg',
+                'Photo Nov 15 2025, 5 19 40 PM.jpg',
+                'Photo Nov 22 2025, 10 44 16 AM.jpg',
+                'Photo Oct 26 2025, 8 49 11 AM.jpg',
+                'Photo Sep 01 2025, 6 50 46 PM.jpg',
+                'Photo Sep 13 2025, 4 23 54 AM.jpg',
+                'Photo Sep 13 2025, 5 07 02 AM.jpg',
+                'Photo Sep 13 2025, 5 16 35 AM.jpg',
+                'Photo Sep 13 2025, 5 46 13 AM.jpg',
+                'Photo Sep 13 2025, 5 47 25 AM.jpg',
+                'Photo Sep 13 2025, 5 51 04 AM.jpg',
+                'Photo Sep 15 2023, 12 11 04 PM.jpg'
+            ];
+            function nameToAlt(name) {
+                return name.replace('.jpg', '');
+            }
+            function renderItem(name) {
+                const figure = document.createElement('figure');
+                figure.className = 'relative aspect-[4/5] rounded-2xl overflow-hidden shadow-xl cursor-pointer';
+                const img = document.createElement('img');
+                img.src = basePath + name;
+                img.alt = nameToAlt(name);
+                img.loading = 'lazy';
+                img.className = 'w-full h-full object-cover';
+                figure.appendChild(img);
+                figure.addEventListener('click', () => {
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    lightbox.classList.remove('hidden');
+                    bodyEl.classList.add('overflow-hidden');
+                });
+                grid.appendChild(figure);
+            }
+            const initialCount = 6;
+            imgs.slice(0, initialCount).forEach(renderItem);
+            if (seeMoreBtn) {
+                seeMoreBtn.addEventListener('click', () => {
+                    imgs.slice(initialCount).forEach(renderItem);
+                    seeMoreBtn.classList.add('hidden');
+                });
+            }
+            lightbox.addEventListener('click', (e) => {
+                if (e.target.dataset.close === 'true') {
+                    lightbox.classList.add('hidden');
+                    bodyEl.classList.remove('overflow-hidden');
+                }
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+                    lightbox.classList.add('hidden');
+                    bodyEl.classList.remove('overflow-hidden');
+                }
+            });
+        })();
+        
+        (function initBrandMarquee() {
+            const group1 = document.getElementById('brandGroup1');
+            const group2 = document.getElementById('brandGroup2');
+            if (!group1 || !group2) return;
+            const basePath = 'asset/logo/';
+            const logos = [
+                'Screenshot 2026-01-11 165609.png',
+                'Screenshot 2026-01-11 165645.png',
+                'Screenshot 2026-01-11 165709.png',
+                'Screenshot 2026-01-11 165736.png',
+                'Screenshot 2026-01-11 165756.png',
+                'Screenshot 2026-01-11 165820.png',
+                'Screenshot 2026-01-11 165845.png',
+                'Screenshot 2026-01-11 165902.png',
+                'Screenshot 2026-01-11 165918.png',
+                'Screenshot 2026-01-11 165935.png',
+                'Screenshot 2026-01-11 165950.png',
+                'Screenshot 2026-01-11 170005.png',
+                'Screenshot 2026-01-11 170021.png',
+                'Screenshot 2026-01-11 170259.png',
+                'Screenshot 2026-01-11 170315.png',
+                'Screenshot 2026-01-11 170329.png',
+                'Screenshot 2026-01-11 170420.png',
+                'Screenshot 2026-01-11 170434.png',
+                'Screenshot 2026-01-11 170448.png',
+                'Screenshot 2026-01-11 170505.png',
+                'Screenshot 2026-01-11 170521.png',
+                'Screenshot 2026-01-11 170533.png',
+            ];
+            function fileNameToAlt(name) {
+                return name.replace('.png', '').replace(/[_-]+/g, ' ');
+            }
+            function createLogoItem(src, alt) {
+                const li = document.createElement('li');
+                const img = document.createElement('img');
+                img.src = basePath + src;
+                img.alt = alt;
+                img.className = 'h-10 md:h-12 w-auto object-contain';
+                li.appendChild(img);
+                return li;
+            }
+            logos.forEach(name => group1.appendChild(createLogoItem(name, fileNameToAlt(name))));
+            logos.forEach(name => group2.appendChild(createLogoItem(name, fileNameToAlt(name))));
+        })();
+    </script>
+
+</body></html>
