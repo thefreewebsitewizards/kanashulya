@@ -278,9 +278,9 @@ f<!DOCTYPE html>
 </div>
 <div class="group">
 <div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
-<video class="w-full h-full object-cover" src="asset/website/fashion/She Said Yes.mp4" controls playsinline></video>
+<video class="w-full h-full object-cover" src="asset/website/fashion/Everybody wants this @bettermestore 🤭🖤.mp4" controls playsinline></video>
 </div>
-<h4 class="text-xl font-display">She Said Yes</h4>
+<h4 class="text-xl font-display">Fashion Reel</h4>
 <p class="text-sm opacity-50 uppercase tracking-widest mt-1">Fashion</p>
 </div>
 </div>
@@ -289,13 +289,6 @@ f<!DOCTYPE html>
 <div id="restaurants" class="mb-4">
 <h3 class="text-3xl md:text-4xl font-display mb-6">Restaurant Reels</h3>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="group">
-<div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
-<video class="w-full h-full object-cover" src="asset/website/Restaurants/Video Jan 07 2026, 9 43 19 PM.mp4" controls playsinline></video>
-</div>
-<h4 class="text-xl font-display">Restaurant Reel</h4>
-<p class="text-sm opacity-50 uppercase tracking-widest mt-1">Restaurants</p>
-</div>
 <div class="group">
 <div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
 <video class="w-full h-full object-cover" src="asset/website/Restaurants/Video Jan 07 2026, 9 43 19 PM (1).mp4" controls playsinline></video>
@@ -351,83 +344,59 @@ f<!DOCTYPE html>
 <div id="galleryGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
 </div>
 </section>
-<div id="lightbox" class="fixed inset-0 z-[60] hidden">
-<div class="absolute inset-0 bg-black/80" data-close="true"></div>
-<div class="absolute inset-0 flex items-center justify-center p-4">
-<img id="lightboxImg" class="max-h-[90vh] max-w-[90vw] object-contain rounded-2xl shadow-2xl" alt="Gallery item"/>
+<div id="lightbox" class="fixed inset-0 z-[60] hidden flex items-center justify-center">
+<div class="absolute inset-0 bg-black/95 backdrop-blur-sm" data-close="true"></div>
+
+<!-- Close button -->
+<button class="absolute top-6 right-6 text-white hover:text-accent transition-colors z-[70] p-2" data-close="true" aria-label="Close gallery">
+<span class="material-icons-outlined text-4xl pointer-events-none">close</span>
+</button>
+
+<!-- Navigation buttons -->
+<button id="prevBtn" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white hover:text-accent transition-colors z-[70] p-2 bg-black/20 hover:bg-black/40 rounded-full" aria-label="Previous image">
+<span class="material-icons-outlined text-4xl">chevron_left</span>
+</button>
+<button id="nextBtn" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white hover:text-accent transition-colors z-[70] p-2 bg-black/20 hover:bg-black/40 rounded-full" aria-label="Next image">
+<span class="material-icons-outlined text-4xl">chevron_right</span>
+</button>
+
+<div class="relative z-[65] max-h-[90vh] max-w-[90vw] flex items-center justify-center">
+<img id="lightboxImg" class="max-h-[90vh] max-w-full object-contain rounded-lg shadow-2xl transition-transform duration-300" alt="Gallery item"/>
 </div>
 </div>
 <section class="py-24 max-w-7xl mx-auto px-6" id="services">
-<div class="mb-16 text-center">
-<h2 class="text-5xl font-display mb-4">What I Can Do For You</h2>
-<p class="text-lg opacity-60">Full-service content creation tailored to your brand goals.</p>
+<div class="mb-20 text-center">
+<h2 class="text-5xl md:text-6xl font-display mb-6">Services</h2>
+<p class="text-xl opacity-60 max-w-2xl mx-auto">Full-service content creation tailored to your brand identity and objectives.</p>
 </div>
-<div class="grid md:grid-cols-3 gap-8">
-<div class="p-10 bg-white dark:bg-zinc-800 rounded-3xl border border-zinc-100 dark:border-zinc-700 hover:shadow-xl transition-all group">
-<div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform" aria-hidden="true">
-<span class="material-icons-outlined text-accent text-3xl">star</span>
+<div class="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
+<div class="p-12 bg-white dark:bg-zinc-800 rounded-[2.5rem] border border-zinc-100 dark:border-zinc-700 hover:shadow-2xl transition-all group">
+<div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform" aria-hidden="true">
+<span class="material-icons-outlined text-accent text-4xl">camera_alt</span>
 </div>
-<div class="text-sm uppercase tracking-widest opacity-60 mb-2">01.</div>
-<h3 class="text-2xl font-display leading-snug mb-2">
-<span class="block">Promote a brand in a</span>
-<span class="block">unique and luxury</span>
-<span class="block">driven way.</span>
-</h3>
+<h3 class="text-3xl font-display mb-4">Photography (Professional & Organic)</h3>
+<p class="text-lg opacity-70 leading-relaxed">Authentic, high-quality editorial photography created through both professional setups and organic iPhone shots.</p>
 </div>
-<div class="p-10 bg-white dark:bg-zinc-800 rounded-3xl border border-zinc-100 dark:border-zinc-700 hover:shadow-xl transition-all group">
-<div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform" aria-hidden="true">
-<span class="material-icons-outlined text-accent text-3xl">sell</span>
+<div class="p-12 bg-white dark:bg-zinc-800 rounded-[2.5rem] border border-zinc-100 dark:border-zinc-700 hover:shadow-2xl transition-all group">
+<div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform" aria-hidden="true">
+<span class="material-icons-outlined text-accent text-4xl">videocam</span>
 </div>
-<div class="text-sm uppercase tracking-widest opacity-60 mb-2">02.</div>
-<h3 class="text-2xl font-display leading-snug mb-2">
-<span class="block">Post and tag the</span>
-<span class="block">brand across</span>
-<span class="block">Instagram posts,</span>
-<span class="block">stories, and reels.</span>
-</h3>
+<h3 class="text-3xl font-display mb-4">Sponsored Video Content</h3>
+<p class="text-lg opacity-70 leading-relaxed">Creation of engaging Reels, TikToks, and UGC-style videos tailored to each brand’s brief and objectives.</p>
 </div>
-<div class="p-10 bg-white dark:bg-zinc-800 rounded-3xl border border-zinc-100 dark:border-zinc-700 hover:shadow-xl transition-all group">
-<div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform" aria-hidden="true">
-<span class="material-icons-outlined text-accent text-3xl">video_library</span>
+<div class="p-12 bg-white dark:bg-zinc-800 rounded-[2.5rem] border border-zinc-100 dark:border-zinc-700 hover:shadow-2xl transition-all group">
+<div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform" aria-hidden="true">
+<span class="material-icons-outlined text-accent text-4xl">event_available</span>
 </div>
-<div class="text-sm uppercase tracking-widest opacity-60 mb-2">03.</div>
-<h3 class="text-2xl font-display leading-snug mb-2">
-<span class="block">Produce custom</span>
-<span class="block">user-generated</span>
-<span class="block">content (UGC) for</span>
-<span class="block">the brand.</span>
-</h3>
+<h3 class="text-3xl font-display mb-4">Event Appearance & Brand Promotion</h3>
+<p class="text-lg opacity-70 leading-relaxed">Attendance at brand events, launches, pop-ups, and activations with real-time content creation and social promotion to connect brands with their audience authentically.</p>
 </div>
-<div class="p-10 bg-white dark:bg-zinc-800 rounded-3xl border border-zinc-100 dark:border-zinc-700 hover:shadow-xl transition-all group">
-<div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform" aria-hidden="true">
-<span class="material-icons-outlined text-accent text-3xl">group</span>
+<div class="p-12 bg-white dark:bg-zinc-800 rounded-[2.5rem] border border-zinc-100 dark:border-zinc-700 hover:shadow-2xl transition-all group">
+<div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform" aria-hidden="true">
+<span class="material-icons-outlined text-accent text-4xl">handshake</span>
 </div>
-<div class="text-sm uppercase tracking-widest opacity-60 mb-2">04.</div>
-<h3 class="text-2xl font-display leading-snug mb-2">
-<span class="block">Collaborate on posts</span>
-<span class="block">with the brand.</span>
-</h3>
-</div>
-<div class="p-10 bg-white dark:bg-zinc-800 rounded-3xl border border-zinc-100 dark:border-zinc-700 hover:shadow-xl transition-all group">
-<div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform" aria-hidden="true">
-<span class="material-icons-outlined text-accent text-3xl">verified</span>
-</div>
-<div class="text-sm uppercase tracking-widest opacity-60 mb-2">05.</div>
-<h3 class="text-2xl font-display leading-snug mb-2">
-<span class="block">Act as a brand</span>
-<span class="block">ambassador.</span>
-</h3>
-</div>
-<div class="p-10 bg-white dark:bg-zinc-800 rounded-3xl border border-zinc-100 dark:border-zinc-700 hover:shadow-xl transition-all group">
-<div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform" aria-hidden="true">
-<span class="material-icons-outlined text-accent text-3xl">event</span>
-</div>
-<div class="text-sm uppercase tracking-widest opacity-60 mb-2">06.</div>
-<h3 class="text-2xl font-display leading-snug mb-2">
-<span class="block">Event Appearance</span>
-<span class="block">(storytelling, tagging,</span>
-<span class="block">promoting the brand)</span>
-</h3>
+<h3 class="text-3xl font-display mb-4">Long-Term Partnerships & Brand Ambassador Roles</h3>
+<p class="text-lg opacity-70 leading-relaxed">Ongoing collaborations focused on consistent brand storytelling, brand awareness, trust, and recognition through repeated exposure and authentic integration.</p>
 </div>
 </div>
 </section>
@@ -554,91 +523,144 @@ f<!DOCTYPE html>
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightboxImg');
             const seeMoreBtn = document.getElementById('gallerySeeMore');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
             if (!grid || !lightbox || !lightboxImg) return;
-            const basePath = 'asset/gallery/';
-            const imgs = [
-                'Photo Apr 19 2024, 3 15 13 PM.jpg',
-                'Photo Apr 21 2023, 11 54 34 AM.jpg',
-                'Photo Aug 03 2025, 12 23 20 PM.jpg',
-                'Photo Aug 03 2025, 12 24 09 PM.jpg',
-                'Photo Aug 06 2025, 10 34 29 AM.jpg',
-                'Photo Aug 23 2025, 1 38 04 PM.jpg',
-                'Photo Aug 24 2025, 4 56 55 PM.jpg',
-                'Photo Dec 01 2025, 11 39 15 PM.jpg',
-                'Photo Dec 07 2025, 12 49 54 AM.jpg',
-                'Photo Dec 22 2025, 1 38 42 PM.jpg',
-                'Photo Dec 23 2025, 6 48 35 PM.jpg',
-                'Photo Jan 07 2026, 6 55 14 PM.jpg',
-                'Photo Jan 07 2026, 7 15 12 PM (1).jpg',
-                'Photo Jan 07 2026, 7 15 12 PM (10).jpg',
-                'Photo Jan 07 2026, 7 15 12 PM (2).jpg',
-                'Photo Jan 07 2026, 7 15 12 PM (3).jpg',
-                'Photo Jan 07 2026, 7 15 12 PM (4).jpg',
-                'Photo Jan 07 2026, 7 15 12 PM (5).jpg',
-                'Photo Jan 07 2026, 7 15 12 PM (6).jpg',
-                'Photo Jan 07 2026, 7 15 12 PM (7).jpg',
-                'Photo Jan 07 2026, 7 15 12 PM (8).jpg',
-                'Photo Jan 07 2026, 7 15 12 PM (9).jpg',
-                'Photo Jan 07 2026, 7 15 12 PM.jpg',
-                'Photo Jan 19 2024, 11 22 36 PM.jpg',
-                'Photo Jul 19 2025, 5 02 12 PM.jpg',
-                'Photo Jul 25 2025, 10 17 01 PM (1).jpg',
-                'Photo Jul 25 2025, 10 17 01 PM.jpg',
-                'Photo Jul 30 2025, 5 17 01 PM.jpg',
-                'Photo Jun 07 2025, 4 55 10 PM.jpg',
-                'Photo Mar 09 2025, 5 03 09 PM.jpg',
-                'Photo May 14 2024, 10 00 25 PM.jpg',
-                'Photo Nov 15 2025, 5 19 40 PM.jpg',
-                'Photo Nov 22 2025, 10 44 16 AM.jpg',
-                'Photo Oct 26 2025, 8 49 11 AM.jpg',
-                'Photo Sep 01 2025, 6 50 46 PM.jpg',
-                'Photo Sep 13 2025, 4 23 54 AM.jpg',
-                'Photo Sep 13 2025, 5 07 02 AM.jpg',
-                'Photo Sep 13 2025, 5 16 35 AM.jpg',
-                'Photo Sep 13 2025, 5 46 13 AM.jpg',
-                'Photo Sep 13 2025, 5 47 25 AM.jpg',
-                'Photo Sep 13 2025, 5 51 04 AM.jpg',
-                'Photo Sep 15 2023, 12 11 04 PM.jpg'
+
+            let currentIndex = 0;
+            const galleryItems = [
+                // New images first for priority
+                { src: 'asset/new/Photo Aug 06 2025, 10 34 29 AM.jpg', alt: 'Editorial Look 1' },
+                { src: 'asset/new/Photo Jan 07 2026, 7 15 12 PM (6).jpg', alt: 'Editorial Look 2' },
+                { src: 'asset/new/Photo Jan 07 2026, 7 15 12 PM (8).jpg', alt: 'Editorial Look 3' },
+                { src: 'asset/new/Photo Jan 22 2026, 2 49 57 PM (1).jpg', alt: 'Editorial Look 4' },
+                { src: 'asset/new/Photo Jan 22 2026, 2 49 57 PM.jpg', alt: 'Editorial Look 5' },
+                { src: 'asset/new/Photo Jul 25 2025, 10 17 01 PM (1).jpg', alt: 'Editorial Look 6' },
+                { src: 'asset/new/Photo Jul 30 2025, 5 17 01 PM.jpg', alt: 'Editorial Look 7' },
+                { src: 'asset/new/Photo Sep 13 2025, 5 16 35 AM.jpg', alt: 'Editorial Look 8' },
+                { src: 'asset/new/Photo Sep 13 2025, 5 47 25 AM.jpg', alt: 'Editorial Look 9' },
+                // Existing gallery images
+                { src: 'asset/gallery/Photo Apr 19 2024, 3 15 13 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Apr 21 2023, 11 54 34 AM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Aug 03 2025, 12 23 20 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Aug 03 2025, 12 24 09 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Aug 23 2025, 1 38 04 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Aug 24 2025, 4 56 55 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Dec 01 2025, 11 39 15 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Dec 07 2025, 12 49 54 AM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Dec 22 2025, 1 38 42 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Dec 23 2025, 6 48 35 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Jan 07 2026, 6 55 14 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Jan 07 2026, 7 15 12 PM (1).jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Jan 07 2026, 7 15 12 PM (10).jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Jan 07 2026, 7 15 12 PM (2).jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Jan 07 2026, 7 15 12 PM (3).jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Jan 07 2026, 7 15 12 PM (4).jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Jan 07 2026, 7 15 12 PM (5).jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Jan 07 2026, 7 15 12 PM (7).jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Jan 07 2026, 7 15 12 PM (9).jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Jan 07 2026, 7 15 12 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Jan 19 2024, 11 22 36 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Jul 19 2025, 5 02 12 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Jul 25 2025, 10 17 01 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Jun 07 2025, 4 55 10 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Mar 09 2025, 5 03 09 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo May 14 2024, 10 00 25 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Nov 15 2025, 5 19 40 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Nov 22 2025, 10 44 16 AM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Oct 26 2025, 8 49 11 AM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Sep 01 2025, 6 50 46 PM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Sep 13 2025, 4 23 54 AM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Sep 13 2025, 5 07 02 AM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Sep 13 2025, 5 46 13 AM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Sep 13 2025, 5 51 04 AM.jpg', alt: 'Gallery Image' },
+                { src: 'asset/gallery/Photo Sep 15 2023, 12 11 04 PM.jpg', alt: 'Gallery Image' }
             ];
-            function nameToAlt(name) {
-                return name.replace('.jpg', '');
+
+            function openLightbox(index) {
+                currentIndex = index;
+                const item = galleryItems[currentIndex];
+                lightboxImg.style.transform = 'scale(0.95)';
+                lightboxImg.src = item.src;
+                lightboxImg.alt = item.alt;
+                lightbox.classList.remove('hidden');
+                bodyEl.classList.add('overflow-hidden');
+                setTimeout(() => {
+                    lightboxImg.style.transform = 'scale(1)';
+                }, 50);
             }
-            function renderItem(name) {
+
+            function closeLightbox() {
+                lightbox.classList.add('hidden');
+                bodyEl.classList.remove('overflow-hidden');
+            }
+
+            function showPrev() {
+                currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+                openLightbox(currentIndex);
+            }
+
+            function showNext() {
+                currentIndex = (currentIndex + 1) % galleryItems.length;
+                openLightbox(currentIndex);
+            }
+
+            function renderItem(item, index) {
                 const figure = document.createElement('figure');
-                figure.className = 'relative aspect-[4/5] rounded-2xl overflow-hidden shadow-xl cursor-pointer';
+                // Collage logic: different sizes based on index
+                let className = 'relative rounded-2xl overflow-hidden shadow-xl cursor-pointer group';
+                if (index % 7 === 0) className += ' md:col-span-2 md:row-span-2 aspect-[4/5]';
+                else if (index % 5 === 0) className += ' md:row-span-2 aspect-[4/9]';
+                else className += ' aspect-[4/5]';
+                
+                figure.className = className;
+                
                 const img = document.createElement('img');
-                img.src = basePath + name;
-                img.alt = nameToAlt(name);
+                img.src = item.src;
+                img.alt = item.alt;
                 img.loading = 'lazy';
-                img.className = 'w-full h-full object-cover';
+                img.className = 'w-full h-full object-cover transition-transform duration-700 group-hover:scale-110';
+                
+                const overlay = document.createElement('div');
+                overlay.className = 'absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center';
+                overlay.innerHTML = '<span class="material-icons-outlined text-white text-4xl">fullscreen</span>';
+                
                 figure.appendChild(img);
-                figure.addEventListener('click', () => {
-                    lightboxImg.src = img.src;
-                    lightboxImg.alt = img.alt;
-                    lightbox.classList.remove('hidden');
-                    bodyEl.classList.add('overflow-hidden');
-                });
+                figure.appendChild(overlay);
+                figure.addEventListener('click', () => openLightbox(index));
                 grid.appendChild(figure);
             }
-            const initialCount = 6;
-            imgs.slice(0, initialCount).forEach(renderItem);
+
+            const initialCount = 12; // More for collage feel
+            galleryItems.slice(0, initialCount).forEach((item, idx) => renderItem(item, idx));
+
             if (seeMoreBtn) {
                 seeMoreBtn.addEventListener('click', () => {
-                    imgs.slice(initialCount).forEach(renderItem);
+                    galleryItems.slice(initialCount).forEach((item, idx) => renderItem(item, idx + initialCount));
                     seeMoreBtn.classList.add('hidden');
                 });
             }
+
             lightbox.addEventListener('click', (e) => {
-                if (e.target.dataset.close === 'true') {
-                    lightbox.classList.add('hidden');
-                    bodyEl.classList.remove('overflow-hidden');
-                }
+                if (e.target.dataset.close === 'true') closeLightbox();
             });
+
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showPrev();
+            });
+
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                showNext();
+            });
+
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
-                    lightbox.classList.add('hidden');
-                    bodyEl.classList.remove('overflow-hidden');
-                }
+                if (lightbox.classList.contains('hidden')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') showPrev();
+                if (e.key === 'ArrowRight') showNext();
             });
         })();
         
