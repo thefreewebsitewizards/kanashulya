@@ -254,14 +254,14 @@ f<!DOCTYPE html>
 </div>
 <div class="group">
 <div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
-<video class="w-full h-full object-cover" src="asset/website/fashion/VIVAIA..mp4" controls playsinline></video>
+<video class="w-full h-full object-cover" src="asset/website/fashion/VIVAIA-2.mp4" controls playsinline></video>
 </div>
 <h4 class="text-xl font-display">VIVAIA</h4>
 <p class="text-sm opacity-50 uppercase tracking-widest mt-1">Fashion</p>
 </div>
 <div class="group">
 <div class="relative aspect-[9/16] rounded-2xl overflow-hidden mb-4 shadow-xl">
-<video class="w-full h-full object-cover" src="asset/website/fashion/Everybody wants this @bettermestore 🤭🖤.mp4" controls playsinline></video>
+<video class="w-full h-full object-cover" src="asset/website/fashion/bettermestore.mp4" controls playsinline></video>
 </div>
 <h4 class="text-xl font-display">BetterMe</h4>
 <p class="text-sm opacity-50 uppercase tracking-widest mt-1">Fashion</p>
@@ -360,34 +360,7 @@ f<!DOCTYPE html>
 <button id="gallerySeeMore" type="button" class="px-6 py-2 border border-zinc-200 dark:border-zinc-700 rounded-full hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-primary transition-all">See all gallery</button>
 </div>
 
-<div class="space-y-24">
-<!-- Row 1: Editorial Feel, Organic Capture -->
-<div>
-<div class="mb-8">
-<h3 class="text-3xl font-display italic">Editorial Feel, Organic Capture</h3>
-<div class="h-px w-full bg-zinc-200 dark:bg-zinc-800 mt-4"></div>
-</div>
-<div id="galleryGridRow1" class="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
-</div>
-
-<!-- Row 2: Authentic, High-Quality -->
-<div>
-<div class="mb-8">
-<h3 class="text-3xl font-display italic">Authentic, High-Quality</h3>
-<div class="h-px w-full bg-zinc-200 dark:bg-zinc-800 mt-4"></div>
-</div>
-<div id="galleryGridRow2" class="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
-</div>
-
-<!-- Row 3: Fashion-Forward Visuals -->
-<div>
-<div class="mb-8">
-<h3 class="text-3xl font-display italic">Fashion-Forward Visuals</h3>
-<div class="h-px w-full bg-zinc-200 dark:bg-zinc-800 mt-4"></div>
-</div>
-<div id="galleryGridRow3" class="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
-</div>
-</div>
+<div id="galleryMasonry" class="columns-2 lg:columns-3 gap-6 [column-fill:_balance]"></div>
 </div>
 </section>
 <div id="lightbox" class="fixed inset-0 z-[60] hidden flex items-center justify-center">
@@ -565,33 +538,26 @@ f<!DOCTYPE html>
         }
         
         (function initGallery() {
-            const row1 = document.getElementById('galleryGridRow1');
-            const row2 = document.getElementById('galleryGridRow2');
-            const row3 = document.getElementById('galleryGridRow3');
+            const galleryGrid = document.getElementById('galleryMasonry');
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightboxImg');
             const seeMoreBtn = document.getElementById('gallerySeeMore');
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
             
-            if (!row1 || !row2 || !row3 || !lightbox || !lightboxImg) return;
+            if (!galleryGrid || !lightbox || !lightboxImg) return;
 
             let currentIndex = 0;
             const galleryItems = [
-                { src: 'asset/gallery/Photo Sep 13 2025, 5 47 25 AM.jpg', alt: 'Editorial Look 1', row: 1 },
-                { src: 'asset/gallery/Photo Jan 07 2026, 7 15 12 PM (6).jpg', alt: 'Editorial Look 2', row: 1 },
-                { src: 'asset/gallery/Photo Jan 07 2026, 7 15 12 PM (8).jpg', alt: 'Editorial Look 3', row: 1 },
-                { src: 'asset/gallery/Photo Sep 13 2025, 5 16 35 AM.jpg', alt: 'Editorial Look 4', row: 1 },
-                
-                { src: 'asset/gallery/Photo Jan 22 2026, 2 49 57 PM (1).jpg', alt: 'Authentic Look 1', row: 2 },
-                { src: 'asset/gallery/Photo Jan 22 2026, 2 49 57 PM.jpg', alt: 'Authentic Look 2', row: 2 },
-                { src: 'asset/gallery/Photo Jul 25 2025, 10 17 01 PM (1).jpg', alt: 'Authentic Look 3', row: 2 },
-                { src: 'asset/gallery/Photo Jul 30 2025, 5 17 01 PM.jpg', alt: 'Authentic Look 4', row: 2 },
-                
-                { src: 'asset/gallery/Photo Sep 13 2025, 5 47 25 AM.jpg', alt: 'Fashion Forward 1', row: 3 },
-                { src: 'asset/gallery/Photo Jan 07 2026, 7 15 12 PM (6).jpg', alt: 'Fashion Forward 2', row: 3 },
-                { src: 'asset/gallery/Photo Jan 07 2026, 7 15 12 PM (8).jpg', alt: 'Fashion Forward 3', row: 3 },
-                { src: 'asset/gallery/Photo Sep 13 2025, 5 16 35 AM.jpg', alt: 'Fashion Forward 4', row: 3 }
+                { src: 'asset/gallery/Photo Aug 06 2025, 10 34 29 AM.jpg', alt: 'Photography 1' },
+                { src: 'asset/gallery/Photo Jan 07 2026, 7 15 12 PM (6).jpg', alt: 'Photography 2' },
+                { src: 'asset/gallery/Photo Jan 07 2026, 7 15 12 PM (8).jpg', alt: 'Photography 3' },
+                { src: 'asset/gallery/Photo Jan 22 2026, 2 49 57 PM (1).jpg', alt: 'Photography 4' },
+                { src: 'asset/gallery/Photo Jan 22 2026, 2 49 57 PM.jpg', alt: 'Photography 5' },
+                { src: 'asset/gallery/Photo Jul 25 2025, 10 17 01 PM (1).jpg', alt: 'Photography 6' },
+                { src: 'asset/gallery/Photo Jul 30 2025, 5 17 01 PM.jpg', alt: 'Photography 7' },
+                { src: 'asset/gallery/Photo Sep 13 2025, 5 16 35 AM.jpg', alt: 'Photography 8' },
+                { src: 'asset/gallery/Photo Sep 13 2025, 5 47 25 AM.jpg', alt: 'Photography 9' }
             ];
 
             function openLightbox(index) {
@@ -622,17 +588,26 @@ f<!DOCTYPE html>
                 openLightbox(currentIndex);
             }
 
+            const aspectClasses = [
+                'aspect-square',
+                'aspect-[4/5]',
+                'aspect-[3/4]',
+                'aspect-[9/16]',
+                'aspect-[5/4]',
+                'aspect-[2/3]',
+                'aspect-[7/5]'
+            ];
+
             function renderItem(item, index, container) {
                 const figure = document.createElement('figure');
-                let className = 'relative rounded-2xl overflow-hidden shadow-lg cursor-pointer group aspect-[3/4]';
-                
-                figure.className = className;
+                const aspectClass = aspectClasses[index % aspectClasses.length];
+                figure.className = `relative mb-6 break-inside-avoid rounded-2xl overflow-hidden shadow-lg cursor-pointer group ${aspectClass}`;
                 
                 const img = document.createElement('img');
                 img.src = item.src;
                 img.alt = item.alt;
                 img.loading = 'lazy';
-                img.className = 'w-full h-full object-cover transition-transform duration-700 group-hover:scale-110';
+                img.className = 'w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]';
                 
                 const overlay = document.createElement('div');
                 overlay.className = 'absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center';
@@ -645,9 +620,7 @@ f<!DOCTYPE html>
             }
 
             galleryItems.forEach((item, idx) => {
-                if (item.row === 1) renderItem(item, idx, row1);
-                if (item.row === 2) renderItem(item, idx, row2);
-                if (item.row === 3) renderItem(item, idx, row3);
+                renderItem(item, idx, galleryGrid);
             });
 
             if (seeMoreBtn) seeMoreBtn.classList.add('hidden');
